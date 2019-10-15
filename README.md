@@ -15,7 +15,7 @@ The goal of this backend is provide these 3 endpoints
 }
 ```
 
-*2 - We want to be able to receive this report *
+*2 - We want to be able to receive this report*
 
 ```
 [
