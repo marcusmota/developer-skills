@@ -1,0 +1,24 @@
+{
+  "name": "cloudoki-backend",
+  "version": "1.0.0",
+  "description": "It's the backend implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcus Mota <marcushcsm@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "guid": "0.0.12",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.6"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "jest": "^24.9.0",
+    "sequelize-cli": "^5.5.1",
+    "sinon": "^7.5.0",
+    "supertest": "^4.0.2"
+  }
+}
