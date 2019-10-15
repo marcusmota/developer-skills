@@ -5,6 +5,13 @@ const request = require("supertest")
 const app = require("../../app")
 
 describe("developers controller tests", () => {
+    beforeAll(done => {
+        app.listen(done)
+    })
+
+    afterAll(done => {
+        app.close(done)
+    })
     beforeEach(async () => {
         models.developers.destroy({ where: {} })
         models.companies.destroy({ where: {} })

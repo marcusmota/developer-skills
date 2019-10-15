@@ -1,16 +1,6 @@
 const models = require("./../../models")
 const request = require("supertest")
 const app = require("../../app")
-const skillControler = require("../skills")
-
-const mockRequest = () => {}
-
-const mockResponse = () => {
-    const res = {}
-    res.status = jest.fn().mockReturnValue(res)
-    res.json = jest.fn().mockReturnValue(res)
-    return res
-}
 
 const storeHelper = async () => {
     const javascript = await models.skills.create({
@@ -48,6 +38,14 @@ const storeHelper = async () => {
     await anotherDeveloper.setSkills([dotnet, java, javascript])
 }
 describe("developers controller tests", () => {
+    beforeAll(done => {
+        app.listen(done)
+    })
+
+    afterAll(done => {
+        app.close(done)
+    })
+
     beforeEach(async () => {
         models.developers.destroy({ where: {} })
         models.companies.destroy({ where: {} })
@@ -79,13 +77,6 @@ describe("developers controller tests", () => {
             })
             expect(result.status).toBe(200)
             expect(returnedSkills).toEqual(possibleSkills)
-        })
-        it("should return 422", async () => {
-            const res = mockResponse()
-            const req = mockRequest()
-            await skillControler.fetchSkillsWithCompaniesUsingIt(req, res)
-            console.log(res)
-            expect(res.status).toHaveBeenCalledWith(200)
         })
     })
     describe("GET /fetch-skills-count", () => {
