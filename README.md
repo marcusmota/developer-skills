@@ -5,7 +5,7 @@ It's a simple api using Node.js with MySQL as database, jest as test environment
 
 The goal of this backend is provide these 3 endpoints
 
-1 - We want to be able to insert this JSON shape in our database
+*1 - We want to be able to insert this JSON shape in our database*
 
 ```
 {
@@ -15,7 +15,7 @@ The goal of this backend is provide these 3 endpoints
 }
 ```
 
-2 - We want to be able to receive this report 
+*2 - We want to be able to receive this report *
 
 ```
 [
@@ -41,7 +41,7 @@ The goal of this backend is provide these 3 endpoints
 ]
 ```
 
-3 - We want to be able to receive this report as well
+*3 - We want to be able to receive this report as well*
 
 
 ```
@@ -52,7 +52,7 @@ The goal of this backend is provide these 3 endpoints
 }
 ```
 
-### Initial setup
+## Initial setup
 
 The application is built with Node.js and MySQL as database . To start the application you need to have the `MySQL` and `Node.js` installed previously (in a new version of the solution we could have the application running in docker to avoid this step)
 
@@ -60,19 +60,19 @@ Once you have installed both, create a database called `challenge` and `challeng
 
 Run the `npm run migration` and `npm run migration-test` to create the tables schemas in the databases
 
-### Running the API
+## Running the API
 
 Install the dependecies using `npm install` then type `npm run start-dev`, the application will be avaible on *PORT 3000* by default. You should see something similar in your terminal
 
 `App running at port 3000 - env development - 2019-10-15T20:28:59.348Z`
 
-## Endpoints Availables
+### Endpoints Availables
 
 To make either a post request or get request, open your postman and type one of the following URLs
 
 Considering the `BASE_URL` as `http://localhost:3000`
 
-`POST BASE_URL + '/developers'` - To create a new record in the database, this method expect this shape as the body
+`POST BASE_URL + /developers` - To create a new record in the database, this method expect this shape as the body
 
 ```
 {
@@ -82,7 +82,7 @@ Considering the `BASE_URL` as `http://localhost:3000`
 }
 ```
 
-`GET BASE_URL + '/fetch-skills-with-companies'` - To receive the report with the list of all the languages and the companies that are using it
+`GET BASE_URL + /fetch-skills-with-companies` - To receive the report with the list of all the languages and the companies that are using it
 ```
 [
   {
@@ -108,7 +108,7 @@ Considering the `BASE_URL` as `http://localhost:3000`
 ```
 
 
-`GET BASE_URL + '/fetch-skills-count'` - To receive the report with the number of developers per language
+`GET BASE_URL + /fetch-skills-count` - To receive the report with the number of developers per language
 
 ```
 {
@@ -118,9 +118,9 @@ Considering the `BASE_URL` as `http://localhost:3000`
 }
 ```
 
-### Running the tests
+## Running the tests
 
-Install the dependecies using `npm install` then type `npm run test`, you should see the `jest` output in the terminal
+The tests files are inside of folders called *__tests__*, to run it you will need to install the dependecies using `npm install` then type `npm run test`, you should see the `jest` output in the terminal
 
 ## Authors
 
