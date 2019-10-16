@@ -15,7 +15,7 @@ The goal of this backend is provide these 3 endpoints
 }
 ```
 
-*2 - We want to be able to receive this report*
+*2 - We want to be able to receive the report with the list of all the languages and the companies that are using it*
 
 ```
 [
@@ -41,7 +41,7 @@ The goal of this backend is provide these 3 endpoints
 ]
 ```
 
-*3 - We want to be able to receive this report as well*
+*3 - We want to be able to receive this report with the number of developers per language*
 
 
 ```
@@ -58,11 +58,11 @@ The application is built with Node.js and MySQL as database . To start the appli
 
 Once you have installed both, create a database called `challenge` and `challenge_test` both with password set to `dev` (Note: if you want you can change the `src/config/config.js` file to apply you database setup e.g database name, user and so on)
 
-Run the `npm run migration` and `npm run migration-test` to create the tables schemas in the databases
+Run the `npm install` then `npm run migration` and `npm run migration-test` to create the tables schemas in the databases
 
 ## Running the API
 
-Install the dependecies using `npm install` then type `npm run start-dev`, the application will be avaible on *PORT 3000* by default. You should see something similar in your terminal
+Install the dependecies using `npm install` if you have not yet then type `npm run start-dev`, the application will be avaible on *PORT 3000* by default. You should see something similar in your terminal
 
 `App running at port 3000 - env development - 2019-10-15T20:28:59.348Z`
 
@@ -120,7 +120,7 @@ Considering the `BASE_URL` as `http://localhost:3000`
 
 ## Running the tests
 
-The tests files are inside of folders called *__tests__*, to run it you will need to install the dependecies using `npm install` then type `npm run test`, you should see the `jest` output in the terminal
+The tests files are inside of folders called *__tests__*, to run it you will need to install the dependecies using `npm install` if you have not yet then type `npm run test`, you should see the `jest` output in the terminal
 
 ## Authors
 
