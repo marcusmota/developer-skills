@@ -12,7 +12,7 @@
   "author": "Marcus Mota <marcushcsm@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "guid": "0.0.12",
     "mysql2": "^1.7.0",
     "sequelize": "^5.19.6"
